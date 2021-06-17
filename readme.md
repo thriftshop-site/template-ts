@@ -1,4 +1,4 @@
-# Bux.ph Checkout API
+# Netlify Serverless Function Typescript Template
 
 > Use With Thriftshop Site as a Serverless Function
 
@@ -10,8 +10,8 @@
 - [ ] Clone this Repo
 
 ```sh
-git clone https://github.com/goldcoders/bux.ph-checkout
-cd  bux.ph-checkout
+git clone https://github.com/thriftshop-site/template-ts 
+cd  template-ts
 ```
 
 - [ ] Edit ENV: `cp .env.example .env anad edit .env`
@@ -24,13 +24,13 @@ cd  bux.ph-checkout
 
 - [ ] Add Raw JSON
 
+> Edit this with your Request Payload
+
 ```json
 {
-    "amount": 1234,
-    "description": "GOLDCODERS CORP. - MERCHANT CHECKOUT VIA BUX.PH ",
-    "email": "test@goldcoders.dev"
-    "contact": "9111111111",
+    "id": 1234,
     "name": "Hugo Dusk"
+    "description": "Serverless Lambda Functions",
 }
 ```
 
@@ -39,27 +39,32 @@ cd  bux.ph-checkout
 <details>
   <summary>Response JSON</summary>
 
-```json
-{"status":"success","id":7576,"uid":"c40d23d18bf94acaa1ba06f339792a7b"}
-```
+> Add Your Json Response Here
 
-- uid: can be use to generate link 
-- production checkout link: `https://bux.ph/checkout/c40d23d18bf94acaa1ba06f339792a7b`
-- test checkout link: `https://bux.ph/test/checkout/c40d23d18bf94acaa1ba06f339792a7b`
+```json
+//
+```
+> Define Each Response Atrributes Here:
 
 </details>
 
 ## 1 Click Install For Production
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/goldcoders/bux.ph-checkout)
+> Edit This with Your repolink
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriftshop-site/template-ts)
 
 ## Deploy on One Specific Site URL in Production
 
 - Go to [Settings](https://app.netlify.com/sites/tss-test/settings/general)
 
-- Click Change Site Name `bux.ph-checkout.${yourdomain}.com`
+> Edit `$function_name}.${domain}.com/api`
+
+- Click Change Site Name `${function_name}.${yourdomain}.com`
 
 ## Production
 
-- make post request with Needed *payload* to `bux.ph-checkout.${domain}.com/api`
+> Edit `$function_name}.${domain}.com/api`
+
+- make post request with Needed *payload* to `$function_name}.${domain}.com/api`
 
